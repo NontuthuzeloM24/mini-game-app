@@ -20,9 +20,9 @@ export const levels = [
     {
     id: 'level-3',
     difficulty: 'hard',
-    gridSize: 7,
+    gridSize: 5,
     timeLimit: 60,
-    letters: ['F', 'W', 'O', 'S', 'L',],
+    letters: ['F', 'W', 'O', 'S', 'L'],
     words: ['LOW', 'OWL', 'WOLF', 'FOWL', 'SOW', 'SLOW'],
     bonusWords: ['FLOWS']
   }

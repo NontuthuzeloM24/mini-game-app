@@ -1,29 +1,770 @@
-export const levels = [
+[
   {
-    id: 'level-1',
-    difficulty: 'easy',
-    gridSize: 4,
-    timeLimit: 120,
-    letters: ['C', 'A', 'T', 'R', 'O', 'N', 'E', 'S'],
-    words: ['CAT', 'CONE', 'RAT'],
-    bonusWords: ['CART']
+    "id": 1,
+    "difficulty": "easy",
+    "letters": ["P", "U", "R", "E", "E"],
+    "targetWords": ["PURE", "PUREE", "PEER", "RUE"],
+    "puzzleLayout": [
+      ["P", "U", "R", "E", "E"],
+      [" ", " ", "U", " ", " "],
+      [" ", " ", "E", " ", " "]
+    ],
+    "timeLimit": 120,
+    "hints": 3
   },
   {
-    id: 'level-2',
-    difficulty: 'medium',
-    gridSize: 5,
-    timeLimit: 90,
-    letters: ['L', 'E', 'T', 'T', 'E', 'R', 'S', 'O', 'N'],
-    words: ['LETTER', 'SON', 'TONE'],
-    bonusWords: ['STONE']
+    "id": 2,
+    "difficulty": "easy",
+    "letters": ["C", "A", "T", "S"],
+    "targetWords": ["CAT", "ACT", "SAT", "CATS"],
+    "puzzleLayout": [
+      ["C", "A", "T", "S"],
+      ["A", " ", " ", " "],
+      ["T", " ", " ", " "]
+    ],
+    "timeLimit": 120,
+    "hints": 3
   },
-    {
-    id: 'level-3',
-    difficulty: 'hard',
-    gridSize: 5,
-    timeLimit: 60,
-    letters: ['F', 'W', 'O', 'S', 'L'],
-    words: ['LOW', 'OWL', 'WOLF', 'FOWL', 'SOW', 'SLOW'],
-    bonusWords: ['FLOWS']
+  {
+    "id": 3,
+    "difficulty": "easy",
+    "letters": ["D", "O", "G", "S"],
+    "targetWords": ["DOG", "GOD", "DOGS"],
+    "puzzleLayout": [
+      ["D", "O", "G", "S"],
+      ["O", " ", "O", " "],
+      ["G", " ", "D", " "]
+    ],
+    "timeLimit": 120,
+    "hints": 3
+  },
+  {
+    "id": 4,
+    "difficulty": "easy",
+    "letters": ["P", "A", "R", "T"],
+    "targetWords": ["ART", "PAT", "RAT", "PART", "TRAP"],
+    "puzzleLayout": [
+      ["P", "A", "R", "T"],
+      ["A", " ", "A", " "],
+      ["T", "R", "A", "P"]
+    ],
+    "timeLimit": 150,
+    "hints": 3
+  },
+  {
+    "id": 5,
+    "difficulty": "easy",
+    "letters": ["L", "E", "A", "F"],
+    "targetWords": ["ALE", "FLEA", "LEAF"],
+    "puzzleLayout": [
+      ["F", "L", "E", "A"],
+      [" ", "E", " ", "L"],
+      [" ", "A", " ", "E"]
+    ],
+    "timeLimit": 150,
+    "hints": 3
+  },
+  {
+    "id": 6,
+    "difficulty": "medium",
+    "letters": ["S", "T", "O", "N", "E"],
+    "targetWords": [
+      "SON",
+      "TON",
+      "NOT",
+      "ONE",
+      "NET",
+      "TEN",
+      "TONE",
+      "NOTE",
+      "STONE"
+    ],
+    "puzzleLayout": [
+      ["S", "T", "O", "N", "E"],
+      [" ", "O", " ", "O", " "],
+      [" ", "N", "E", "T", " "],
+      [" ", "E", " ", "E", " "]
+    ],
+    "timeLimit": 180,
+    "hints": 3
+  },
+  {
+    "id": 7,
+    "difficulty": "medium",
+    "letters": ["B", "R", "E", "A", "D"],
+    "targetWords": [
+      "ARE",
+      "RED",
+      "EAR",
+      "BAD",
+      "BED",
+      "BARE",
+      "BEAR",
+      "READ",
+      "BREAD"
+    ],
+    "puzzleLayout": [
+      ["B", "R", "E", "A", "D"],
+      ["A", " ", "A", " ", " "],
+      ["R", "E", "D", " ", " "],
+      ["E", " ", " ", " ", " "]
+    ],
+    "timeLimit": 180,
+    "hints": 3
+  },
+  {
+    "id": 8,
+    "difficulty": "medium",
+    "letters": ["P", "L", "A", "N", "E"],
+    "targetWords": [
+      "PAN",
+      "PEN",
+      "NAP",
+      "PALE",
+      "PLAN",
+      "LANE",
+      "LEAP",
+      "PANEL",
+      "PLANE"
+    ],
+    "puzzleLayout": [
+      ["P", "L", "A", "N", "E"],
+      ["A", " ", " ", "A", " "],
+      ["N", "A", "P", " ", " "],
+      ["E", " ", "E", " ", " "],
+      ["L", "A", "N", "E", " "]
+    ],
+    "timeLimit": 200,
+    "hints": 3
+  },
+  {
+    "id": 9,
+    "difficulty": "medium",
+    "letters": ["W", "A", "T", "E", "R"],
+    "targetWords": [
+      "ART",
+      "EAR",
+      "RAW",
+      "TAR",
+      "RATE",
+      "TEAR",
+      "WEAR",
+      "WATER"
+    ],
+    "puzzleLayout": [
+      ["W", "A", "T", "E", "R"],
+      ["E", " ", "A", " ", "A"],
+      ["A", "R", "T", " ", "W"],
+      ["R", " ", "E", "A", "R"]
+    ],
+    "timeLimit": 200,
+    "hints": 3
+  },
+  {
+    "id": 10,
+    "difficulty": "hard",
+    "letters": ["M", "A", "S", "T", "E", "R"],
+    "targetWords": [
+      "ART",
+      "MAT",
+      "RAT",
+      "SEA",
+      "TEA",
+      "EAR",
+      "ARM",
+      "STAR",
+      "TEAM",
+      "SMART",
+      "STEAM",
+      "MASTER"
+    ],
+    "puzzleLayout": [
+      ["M", "A", "S", "T", "E", "R"],
+      ["A", " ", "M", " ", " ", "A"],
+      ["S", "T", "A", "R", " ", "T"],
+      ["T", " ", "R", " ", " ", " "],
+      ["E", "A", "R", " ", " ", " "],
+      ["R", " ", " ", " ", " ", " "]
+    ],
+    "timeLimit": 240,
+    "hints": 3
+  },
+  {
+    "id": 11,
+    "difficulty": "medium",
+    "letters": ["F", "I", "G", "H", "T"],
+    "targetWords": ["FIG", "HIT", "FIT", "GIFT", "FIGHT"],
+    "puzzleLayout": [
+      ["F", "I", "G", "H", "T"],
+      ["I", " ", " ", " ", " "],
+      ["T", " ", " ", " ", " "]
+    ],
+    "timeLimit": 180,
+    "hints": 3
+  },
+  {
+    "id": 12,
+    "difficulty": "medium",
+    "letters": ["S", "M", "I", "L", "E"],
+    "targetWords": ["MIL", "SLIM", "MILE", "SMILE", "LIME"],
+    "puzzleLayout": [
+      ["S", "M", "I", "L", "E"],
+      [" ", "I", " ", " ", " "],
+      [" ", "L", "I", "M", "E"]
+    ],
+    "timeLimit": 180,
+    "hints": 3
+  },
+  {
+    "id": 13,
+    "difficulty": "medium",
+    "letters": ["G", "R", "A", "P", "E"],
+    "targetWords": ["APE", "AGE", "GEAR", "PAGE", "REAP", "GRAPE", "PEAR"],
+    "puzzleLayout": [
+      ["G", "R", "A", "P", "E"],
+      ["E", " ", " ", " ", "A"],
+      ["A", " ", " ", " ", "R"],
+      ["R", "E", "A", "P", " "]
+    ],
+    "timeLimit": 190,
+    "hints": 3
+  },
+  {
+    "id": 14,
+    "difficulty": "medium",
+    "letters": ["C", "L", "O", "U", "D"],
+    "targetWords": ["OLD", "LOUD", "COLD", "CLOUD", "DUO"],
+    "puzzleLayout": [
+      ["C", "L", "O", "U", "D"],
+      ["O", " ", " ", " ", " "],
+      ["L", " ", " ", " ", " "],
+      ["D", " ", " ", " ", " "]
+    ],
+    "timeLimit": 190,
+    "hints": 3
+  },
+  {
+    "id": 15,
+    "difficulty": "medium",
+    "letters": ["T", "R", "A", "I", "N"],
+    "targetWords": ["ANT", "TAN", "RAIN", "ANTI", "TRAIN"],
+    "puzzleLayout": [
+      ["T", "R", "A", "I", "N"],
+      ["A", " ", " ", " ", " "],
+      ["N", " ", " ", " ", " "]
+    ],
+    "timeLimit": 190,
+    "hints": 3
+  },
+  {
+    "id": 16,
+    "difficulty": "medium",
+    "letters": ["S", "H", "A", "R", "P"],
+    "targetWords": ["HAS", "ASH", "SPA", "RAP", "HARP", "RASH", "SHARP"],
+    "puzzleLayout": [
+      ["S", "H", "A", "R", "P"],
+      ["H", " ", " ", " ", " "],
+      ["A", " ", " ", " ", " "],
+      ["R", "A", "S", "H", " "]
+    ],
+    "timeLimit": 200,
+    "hints": 3
+  },
+  {
+    "id": 17,
+    "difficulty": "medium",
+    "letters": ["B", "R", "A", "I", "N"],
+    "targetWords": ["BAR", "BIN", "RAN", "BARN", "RAIN", "BRAIN"],
+    "puzzleLayout": [
+      ["B", "R", "A", "I", "N"],
+      ["A", " ", " ", " ", " "],
+      ["R", "A", "I", "N", " "]
+    ],
+    "timeLimit": 200,
+    "hints": 3
+  },
+  {
+    "id": 18,
+    "difficulty": "medium",
+    "letters": ["F", "L", "O", "W", "E"],
+    "targetWords": ["LOW", "FEW", "OWL", "FLOW", "WOLF", "FLEW"],
+    "puzzleLayout": [
+      ["F", "L", "O", "W"],
+      ["L", " ", " ", "O"],
+      ["O", " ", " ", "L"],
+      ["W", "O", "L", "F"]
+    ],
+    "timeLimit": 210,
+    "hints": 3
+  },
+  {
+    "id": 19,
+    "difficulty": "medium",
+    "letters": ["G", "L", "A", "S", "S"],
+    "targetWords": ["GAS", "LAG", "ASS", "GLASS", "SLAG"],
+    "puzzleLayout": [
+      ["G", "L", "A", "S", "S"],
+      ["L", " ", " ", " ", " "],
+      ["A", " ", " ", " ", " "],
+      ["G", "A", "S", " ", " "]
+    ],
+    "timeLimit": 210,
+    "hints": 3
+  },
+  {
+    "id": 20,
+    "difficulty": "medium",
+    "letters": ["P", "O", "W", "E", "R"],
+    "targetWords": ["ROW", "ORE", "PER", "ROPE", "PORE", "POWER"],
+    "puzzleLayout": [
+      ["P", "O", "W", "E", "R"],
+      ["O", " ", " ", " ", " "],
+      ["R", "O", "P", "E", " "]
+    ],
+    "timeLimit": 210,
+    "hints": 3
+  },
+  {
+    "id": 21,
+    "difficulty": "hard",
+    "letters": ["F", "L", "O", "W", "E", "R"],
+    "targetWords": [
+      "LOW",
+      "ROW",
+      "FOR",
+      "FLOW",
+      "WOLF",
+      "ROLE",
+      "FLOWER",
+      "LOWER"
+    ],
+    "puzzleLayout": [
+      ["F", "L", "O", "W", "E", "R"],
+      ["L", " ", " ", " ", " ", "O"],
+      ["O", " ", " ", " ", " ", "L"],
+      ["W", "O", "L", "F", " ", "E"]
+    ],
+    "timeLimit": 240,
+    "hints": 3
+  },
+  {
+    "id": 22,
+    "difficulty": "hard",
+    "letters": ["P", "L", "A", "N", "E", "T"],
+    "targetWords": [
+      "PAN",
+      "TEN",
+      "ATE",
+      "PLAN",
+      "LANE",
+      "PANT",
+      "PLATE",
+      "PLANE",
+      "PLANET"
+    ],
+    "puzzleLayout": [
+      ["P", "L", "A", "N", "E", "T"],
+      ["L", " ", " ", " ", " ", "E"],
+      ["A", " ", "P", "A", "N", " "],
+      ["N", " ", " ", " ", " ", " "],
+      ["E", " ", " ", " ", " ", " "]
+    ],
+    "timeLimit": 240,
+    "hints": 3
+  },
+  {
+    "id": 23,
+    "difficulty": "hard",
+    "letters": ["B", "R", "I", "G", "H", "T"],
+    "targetWords": ["BIG", "BIT", "RIG", "GIRT", "GRIT", "BRIGHT", "BIRTH"],
+    "puzzleLayout": [
+      ["B", "R", "I", "G", "H", "T"],
+      ["I", " ", " ", " ", " ", " "],
+      ["R", "I", "G", " ", " ", " "],
+      ["T", " ", " ", " ", " ", " "]
+    ],
+    "timeLimit": 250,
+    "hints": 3
+  },
+  {
+    "id": 24,
+    "difficulty": "hard",
+    "letters": ["S", "T", "R", "E", "A", "M"],
+    "targetWords": [
+      "ART",
+      "SEA",
+      "TEA",
+      "RAM",
+      "TEAM",
+      "STAR",
+      "STEAM",
+      "STREAM",
+      "MASTER"
+    ],
+    "puzzleLayout": [
+      ["S", "T", "R", "E", "A", "M"],
+      ["T", " ", " ", " ", " ", "A"],
+      ["R", "E", "A", "M", " ", "S"],
+      ["A", " ", " ", " ", " ", "T"]
+    ],
+    "timeLimit": 250,
+    "hints": 3
+  },
+  {
+    "id": 25,
+    "difficulty": "hard",
+    "letters": ["C", "O", "U", "N", "T", "Y"],
+    "targetWords": ["YOU", "NOT", "OUT", "UNIT", "COUNT", "COUNTY"],
+    "puzzleLayout": [
+      ["C", "O", "U", "N", "T", "Y"],
+      ["O", " ", " ", " ", " ", " "],
+      ["U", "N", "I", "T", " ", " "]
+    ],
+    "timeLimit": 250,
+    "hints": 3
+  },
+  {
+    "id": 26,
+    "difficulty": "hard",
+    "letters": ["D", "A", "N", "G", "E", "R"],
+    "targetWords": [
+      "AGE",
+      "ARE",
+      "RED",
+      "DEAR",
+      "NEAR",
+      "RANGE",
+      "DANGER",
+      "GARDEN"
+    ],
+    "puzzleLayout": [
+      ["D", "A", "N", "G", "E", "R"],
+      ["E", " ", " ", " ", " ", "A"],
+      ["A", " ", " ", " ", " ", "N"],
+      ["R", "A", "N", "G", "E", " "]
+    ],
+    "timeLimit": 260,
+    "hints": 3
+  },
+  {
+    "id": 27,
+    "difficulty": "hard",
+    "letters": ["P", "R", "I", "N", "C", "E"],
+    "targetWords": ["ICE", "PEN", "PIN", "NICE", "RICE", "PRICE", "PRINCE"],
+    "puzzleLayout": [
+      ["P", "R", "I", "N", "C", "E"],
+      ["E", " ", " ", " ", " ", " "],
+      ["N", "I", "C", "E", " ", " "]
+    ],
+    "timeLimit": 260,
+    "hints": 3
+  },
+  {
+    "id": 28,
+    "difficulty": "hard",
+    "letters": ["S", "P", "R", "I", "N", "G"],
+    "targetWords": ["PIN", "SIN", "SIP", "GRIN", "RING", "SING", "SPRING"],
+    "puzzleLayout": [
+      ["S", "P", "R", "I", "N", "G"],
+      ["I", " ", " ", " ", " ", " "],
+      ["N", " ", " ", " ", " ", " "],
+      ["G", "R", "I", "N", " ", " "]
+    ],
+    "timeLimit": 270,
+    "hints": 3
+  },
+  {
+    "id": 29,
+    "difficulty": "hard",
+    "letters": ["A", "C", "T", "I", "O", "N"],
+    "targetWords": ["CAT", "NOT", "TIN", "COIN", "INTO", "UNIT", "ACTION"],
+    "puzzleLayout": [
+      ["A", "C", "T", "I", "O", "N"],
+      ["C", " ", " ", " ", " ", " "],
+      ["T", "I", "N", " ", " ", " "]
+    ],
+    "timeLimit": 270,
+    "hints": 3
+  },
+  {
+    "id": 30,
+    "difficulty": "hard",
+    "letters": ["S", "T", "R", "O", "N", "G"],
+    "targetWords": ["SON", "GOT", "NOT", "SORT", "SONG", "TONS", "STRONG"],
+    "puzzleLayout": [
+      ["S", "T", "R", "O", "N", "G"],
+      ["O", " ", " ", " ", " ", " "],
+      ["N", " ", " ", " ", " ", " "],
+      ["G", "O", "T", " ", " ", " "]
+    ],
+    "timeLimit": 280,
+    "hints": 3
+  },
+  {
+    "id": 31,
+    "difficulty": "hard",
+    "letters": ["W", "I", "N", "T", "E", "R"],
+    "targetWords": ["WET", "TEN", "WIN", "WENT", "WINE", "REIN", "WINTER"],
+    "puzzleLayout": [
+      ["W", "I", "N", "T", "E", "R"],
+      ["E", " ", " ", " ", " ", " "],
+      ["N", " ", " ", " ", " ", " "],
+      ["T", " ", " ", " ", " ", " "]
+    ],
+    "timeLimit": 280,
+    "hints": 3
+  },
+  {
+    "id": 32,
+    "difficulty": "hard",
+    "letters": ["P", "L", "A", "S", "T", "I", "C"],
+    "targetWords": ["CAT", "LIP", "PIT", "SLAP", "PAST", "CLAP", "PLASTIC"],
+    "puzzleLayout": [
+      ["P", "L", "A", "S", "T", "I", "C"],
+      ["L", " ", " ", " ", " ", " ", " "],
+      ["A", " ", " ", " ", " ", " ", " "],
+      ["S", "L", "A", "P", " ", " ", " "]
+    ],
+    "timeLimit": 290,
+    "hints": 3
+  },
+  {
+    "id": 33,
+    "difficulty": "hard",
+    "letters": ["J", "O", "U", "R", "N", "E", "Y"],
+    "targetWords": ["JOY", "RUN", "ONE", "YOUR", "JUNE", "ROUE", "JOURNEY"],
+    "puzzleLayout": [
+      ["J", "O", "U", "R", "N", "E", "Y"],
+      ["O", " ", " ", " ", " ", " ", " "],
+      ["U", " ", " ", " ", " ", " ", " "],
+      ["R", "U", "N", " ", " ", " ", " "]
+    ],
+    "timeLimit": 290,
+    "hints": 3
+  },
+  {
+    "id": 34,
+    "difficulty": "hard",
+    "letters": ["C", "A", "P", "T", "A", "I", "N"],
+    "targetWords": ["CAT", "PAN", "PIN", "PAINT", "PANT", "CAPTAIN"],
+    "puzzleLayout": [
+      ["C", "A", "P", "T", "A", "I", "N"],
+      ["A", " ", " ", " ", " ", " ", " "],
+      ["P", "A", "I", "N", "T", " ", " "]
+    ],
+    "timeLimit": 300,
+    "hints": 3
+  },
+  {
+    "id": 35,
+    "difficulty": "hard",
+    "letters": ["H", "O", "L", "I", "D", "A", "Y"],
+    "targetWords": ["HAD", "DAY", "OIL", "HOLD", "LADY", "IDOL", "HOLIDAY"],
+    "puzzleLayout": [
+      ["H", "O", "L", "I", "D", "A", "Y"],
+      ["O", " ", " ", " ", " ", " ", " "],
+      ["L", "A", "D", "Y", " ", " ", " "]
+    ],
+    "timeLimit": 300,
+    "hints": 3
+  },
+  {
+    "id": 36,
+    "difficulty": "hard",
+    "letters": ["V", "I", "C", "T", "O", "R", "Y"],
+    "targetWords": ["TOY", "CITY", "TRIO", "RIOT", "VICTOR", "VICTORY"],
+    "puzzleLayout": [
+      ["V", "I", "C", "T", "O", "R", "Y"],
+      ["I", " ", " ", " ", " ", " ", " "],
+      ["C", "I", "T", "Y", " ", " ", " "]
+    ],
+    "timeLimit": 310,
+    "hints": 3
+  },
+  {
+    "id": 37,
+    "difficulty": "hard",
+    "letters": ["K", "I", "T", "C", "H", "E", "N"],
+    "targetWords": ["TEN", "NET", "HEN", "ITCH", "KITE", "CHIN", "KITCHEN"],
+    "puzzleLayout": [
+      ["K", "I", "T", "C", "H", "E", "N"],
+      ["I", " ", " ", " ", " ", " ", " "],
+      ["T", "E", "N", " ", " ", " ", " "]
+    ],
+    "timeLimit": 310,
+    "hints": 3
+  },
+  {
+    "id": 38,
+    "difficulty": "hard",
+    "letters": ["F", "O", "R", "T", "U", "N", "E"],
+    "targetWords": ["FOR", "TEN", "NET", "TRUE", "NOTE", "FORT", "FORTUNE"],
+    "puzzleLayout": [
+      ["F", "O", "R", "T", "U", "N", "E"],
+      ["O", " ", " ", " ", " ", " ", " "],
+      ["R", " ", " ", " ", " ", " ", " "],
+      ["T", "R", "U", "E", " ", " ", " "]
+    ],
+    "timeLimit": 320,
+    "hints": 3
+  },
+  {
+    "id": 39,
+    "difficulty": "hard",
+    "letters": ["D", "I", "A", "M", "O", "N", "D"],
+    "targetWords": ["DAM", "AND", "MAD", "MAIN", "MIND", "DIAMOND"],
+    "puzzleLayout": [
+      ["D", "I", "A", "M", "O", "N", "D"],
+      ["I", " ", " ", " ", " ", " ", " "],
+      ["A", "N", "D", " ", " ", " ", " "]
+    ],
+    "timeLimit": 320,
+    "hints": 3
+  },
+  {
+    "id": 40,
+    "difficulty": "hard",
+    "letters": ["S", "U", "N", "R", "I", "S", "E"],
+    "targetWords": ["SUN", "USE", "RUN", "RISE", "SINS", "USER", "SUNRISE"],
+    "puzzleLayout": [
+      ["S", "U", "N", "R", "I", "S", "E"],
+      ["U", " ", " ", " ", " ", " ", " "],
+      ["N", " ", " ", " ", " ", " ", " "]
+    ],
+    "timeLimit": 330,
+    "hints": 3
+  },
+  {
+    "id": 41,
+    "difficulty": "hard",
+    "letters": ["W", "H", "I", "S", "T", "L", "E"],
+    "targetWords": ["THE", "LIST", "WISH", "TILE", "WHILE", "WHISTLE"],
+    "puzzleLayout": [
+      ["W", "H", "I", "S", "T", "L", "E"],
+      ["H", " ", " ", " ", " ", " ", " "],
+      ["I", " ", " ", " ", " ", " ", " "],
+      ["L", "I", "S", "T", " ", " ", " "]
+    ],
+    "timeLimit": 330,
+    "hints": 3
+  },
+  {
+    "id": 42,
+    "difficulty": "hard",
+    "letters": ["C", "O", "M", "P", "A", "N", "Y"],
+    "targetWords": ["ANY", "MAN", "PAN", "COPY", "MANY", "CAMP", "COMPANY"],
+    "puzzleLayout": [
+      ["C", "O", "M", "P", "A", "N", "Y"],
+      ["O", " ", " ", " ", " ", " ", " "],
+      ["M", "A", "N", "Y", " ", " ", " "]
+    ],
+    "timeLimit": 340,
+    "hints": 3
+  },
+  {
+    "id": 43,
+    "difficulty": "hard",
+    "letters": ["B", "L", "A", "N", "K", "E", "T"],
+    "targetWords": ["TEN", "NET", "ANT", "BANK", "BELT", "LAKE", "BLANKET"],
+    "puzzleLayout": [
+      ["B", "L", "A", "N", "K", "E", "T"],
+      ["L", " ", " ", " ", " ", " ", " "],
+      ["A", "N", "T", " ", " ", " ", " "]
+    ],
+    "timeLimit": 340,
+    "hints": 3
+  },
+  {
+    "id": 44,
+    "difficulty": "hard",
+    "letters": ["C", "O", "U", "R", "A", "G", "E"],
+    "targetWords": ["AGE", "CAR", "OUR", "CAGE", "CORE", "RACE", "COURAGE"],
+    "puzzleLayout": [
+      ["C", "O", "U", "R", "A", "G", "E"],
+      ["O", " ", " ", " ", " ", " ", " "],
+      ["R", "A", "C", "E", " ", " ", " "]
+    ],
+    "timeLimit": 350,
+    "hints": 3
+  },
+  {
+    "id": 45,
+    "difficulty": "hard",
+    "letters": ["S", "T", "A", "D", "I", "U", "M"],
+    "targetWords": ["MAD", "SIT", "ITS", "SAID", "MUST", "STAD", "STADIUM"],
+    "puzzleLayout": [
+      ["S", "T", "A", "D", "I", "U", "M"],
+      ["T", " ", " ", " ", " ", " ", " "],
+      ["A", " ", " ", " ", " ", " ", " "],
+      ["D", " ", " ", " ", " ", " ", " "]
+    ],
+    "timeLimit": 350,
+    "hints": 3
+  },
+  {
+    "id": 46,
+    "difficulty": "hard",
+    "letters": ["M", "O", "N", "S", "T", "E", "R"],
+    "targetWords": ["TEN", "NET", "MEN", "REST", "MORE", "TERM", "MONSTER"],
+    "puzzleLayout": [
+      ["M", "O", "N", "S", "T", "E", "R"],
+      ["O", " ", " ", " ", " ", " ", " "],
+      ["R", "E", "S", "T", " ", " ", " "]
+    ],
+    "timeLimit": 360,
+    "hints": 3
+  },
+  {
+    "id": 47,
+    "difficulty": "hard",
+    "letters": ["P", "R", "O", "M", "I", "S", "E"],
+    "targetWords": ["ORE", "PIE", "PRO", "ROPE", "SOME", "MIRE", "PROMISE"],
+    "puzzleLayout": [
+      ["P", "R", "O", "M", "I", "S", "E"],
+      ["R", " ", " ", " ", " ", " ", " "],
+      ["O", " ", " ", " ", " ", " ", " "]
+    ],
+    "timeLimit": 360,
+    "hints": 3
+  },
+  {
+    "id": 48,
+    "difficulty": "hard",
+    "letters": ["H", "A", "R", "M", "O", "N", "Y"],
+    "targetWords": ["ANY", "RAY", "MAN", "HARM", "ROAM", "MYRA", "HARMONY"],
+    "puzzleLayout": [
+      ["H", "A", "R", "M", "O", "N", "Y"],
+      ["A", " ", " ", " ", " ", " ", " "],
+      ["R", "O", "A", "M", " ", " ", " "]
+    ],
+    "timeLimit": 370,
+    "hints": 3
+  },
+  {
+    "id": 49,
+    "difficulty": "hard",
+    "letters": ["D", "E", "S", "E", "R", "V", "E"],
+    "targetWords": ["SEE", "RED", "EVER", "DEER", "SEED", "REED", "DESERVE"],
+    "puzzleLayout": [
+      ["D", "E", "S", "E", "R", "V", "E"],
+      ["E", " ", " ", " ", " ", " ", " "],
+      ["E", "V", "E", "R", " ", " ", " "]
+    ],
+    "timeLimit": 370,
+    "hints": 3
+  },
+  {
+    "id": 50,
+    "difficulty": "hard",
+    "letters": ["F", "R", "E", "E", "D", "O", "M"],
+    "targetWords": ["FOR", "RED", "FREE", "REED", "DEER", "FEED", "FREEDOM"],
+    "puzzleLayout": [
+      ["F", "R", "E", "E", "D", "O", "M"],
+      ["R", " ", " ", " ", " ", " ", " "],
+      ["E", " ", " ", " ", " ", " ", " "],
+      ["E", " ", " ", " ", " ", " ", " "]
+    ],
+    "timeLimit": 380,
+    "hints": 3
   }
 ]
